@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daffa | Punching Bag</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <!-- VUE -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+</head>
+<!-- .......................................................................................................
+//.DDDDDDDDDDDD..........AAAAA........FFFFFFFFFFFFF..FFFFFFFFFFFF......AAAAA.............. ZZZZZZZZZZZZ..
+//.DDDDDDDDDDDDD.........AAAAAA.......FFFFFFFFFFFFF..FFFFFFFFFFFF.....AAAAAA.............. ZZZZZZZZZZZZ..
+//.DDDDDDDDDDDDDD.......AAAAAAA.......FFFFFFFFFFFFF..FFFFFFFFFFFF.....AAAAAAA............. ZZZZZZZZZZZZ..
+//.DDDDD..DDDDDDDD......AAAAAAAA......FFFF...........FFFF.............AAAAAAA....................ZZZZZZ..
+//.DDDDD.....DDDDD......AAAAAAAA......FFFF...........FFFF............AAAAAAAA...................ZZZZZZ...
+//.DDDDD.....DDDDD.....AAAAAAAAA......FFFF...........FFFF............AAAAAAAAA.................ZZZZZZ....
+//.DDDDD......DDDD.....AAAAAAAAAA.....FFFF...........FFFF...........AAAAAAAAAA.................ZZZZZZ....
+//.DDDDD......DDDDD....AAAA.AAAAA.....FFFF...........FFFF...........AAAAA.AAAAA...............ZZZZZZ.....
+//.DDDDD......DDDDD...AAAAA..AAAA.....FFFFFFFFFFFF...FFFFFFFFFFF....AAAA..AAAAA..............ZZZZZZ......
+//.DDDDD......DDDDD...AAAAA..AAAAA....FFFFFFFFFFFF...FFFFFFFFFFF...AAAAA..AAAAA.............ZZZZZZ.......
+//.DDDDD......DDDDD..AAAAA...AAAAA....FFFFFFFFFFFF...FFFFFFFFFFF...AAAAA...AAAAA...........ZZZZZZ........
+//.DDDDD......DDDD...AAAAAAAAAAAAAA...FFFF...........FFFF..........AAAAAAAAAAAAA...........ZZZZZZ........
+//.DDDDD.....DDDDD...AAAAAAAAAAAAAA...FFFF...........FFFF.........FAAAAAAAAAAAAAA......... ZZZZZ.........
+//.DDDDD.....DDDDD..DAAAAAAAAAAAAAA...FFFF...........FFFF.........FAAAAAAAAAAAAAA........ ZZZZ..........
+//.DDDDD...DDDDDDD..DAAAA......AAAAA..FFFF...........FFFF........FFAAA......AAAAA........ ZZZ...........
+//.DDDDDDDDDDDDDD...DAAA.......AAAAA..FFFF...........FFFF........FFAAA.......AAAAA....... ZZZZZZZZZZZZ..
+//.DDDDDDDDDDDDD...DDAAA........AAAAA.FFFF...........FFFF........FFAAA.......AAAAA....... ZZZZZZZZZZZZ..
+//.DDDDDDDDDDDD....DDAAA........AAAAA.FFFF...........FFFF.......FFFAA........AAAAA....... ZZZZZZZZZZZZ..
+//....................................................................................................... -->
+<body style="background: url('./images/chris-kendall-sJ6az6-T1u8-unsplash.jpg') no-repeat;background-size: cover;">
+    <div id="app">
+        <!-- BAG IMAGE -->
+        <div id="bag" :class="{burst: end}"></div>
+        <!-- BAG HEALTH -->
+        <div id="bag-health">
+            <div :style="{width: health + '%'}"></div>
+        </div>
+        <!-- GAME ACTIONS -->
+        <div id="actions">
+            <button class="btn jotos" v-show="!end" @click="punch">Punch</button>
+            <button class="btn restart" v-on:click="restart">Restart</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
