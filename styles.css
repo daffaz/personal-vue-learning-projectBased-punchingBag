@@ -49,6 +49,10 @@ button:hover {
     opacity: 1;
 }
 
+button:focus {
+    outline: none;   
+}
+
 .jotos {
     padding: 20px 50px;
     display: block;
